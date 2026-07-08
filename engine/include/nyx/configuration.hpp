@@ -16,4 +16,19 @@ namespace nyx
         std::vector<Protection> protections;
     };
 
+    class Configuration
+    {
+    public:
+        bool load(const std::filesystem::path &root);
+        bool save(const std::filesystem::path &root);
+
+        const ConfigurationModel &model() const;
+
+        const std::string &content() const;
+
+    private:
+        ConfigurationModel model_;
+        std::string content_;
+    };
+
 }

@@ -10,7 +10,7 @@ namespace fs = std::filesystem;
 namespace
 {
 
-    constexpr auto DefaultConfiguration = R"(config_version = 1
+    constexpr auto DefaultConfiguration = R"(config_version = 7
 
 #
 # Enable protection by adding sections below.
@@ -48,7 +48,10 @@ namespace nyx
 
         ConfigurationParser parser;
 
-        parser.load(root, model_);
+        if (!parser.load(root, model_))
+        {
+            return false;
+        }
 
         return true;
     }
