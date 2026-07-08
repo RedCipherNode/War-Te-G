@@ -9,6 +9,11 @@ target_sources(nyx-engine
     src/configuration_parser.cpp
 )
 
+target_link_libraries(nyx-engine
+    PUBLIC
+    tomlplusplus::tomlplusplus
+)
+
 target_include_directories(nyx-engine
     PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include
