@@ -1,0 +1,4 @@
+add_subdirectory(web)
+add_subdirectory(game)
+add_subdirectory(desktop)
+add_subdirectory(mobile)

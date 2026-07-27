@@ -1,1 +1,0 @@
-#include <nyx/protection.hpp>
